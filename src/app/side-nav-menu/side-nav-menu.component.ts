@@ -1,5 +1,5 @@
 import { AfterContentInit, Component, ContentChildren, EventEmitter, Input, Output, QueryList } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute, NavigationEnd, RouterStateSnapshot } from '@angular/router';
 
 
 @Component({
@@ -15,16 +15,22 @@ export class SideNavItemComponent {
 
   @Input('title') title;
   @Input('route') route;
-  @Output('activated') activated = new EventEmitter();
   active: boolean;
 
   constructor(private router: Router) {
   }
 
   navigate() {
-    this.active = true;
     this.router.navigate([this.route]);
-    this.activated.emit(this.route);
+    // this.activated.emit(this.route);
+  }
+
+  activatePath(path: string) {
+    if (path === this.route) {
+      this.active = true;
+    } else {
+      this.active = false;
+    }
   }
 }
 
@@ -33,30 +39,41 @@ export class SideNavItemComponent {
   templateUrl: './side-nav-menu.component.html',
   styleUrls: ['./side-nav-menu.component.scss']
 })
-export class SideNavMenuComponent implements AfterContentInit{
+export class SideNavMenuComponent {
 
   @Input() sidenav;
   @ContentChildren(SideNavItemComponent) items: QueryList<SideNavItemComponent>;
   active: SideNavItemComponent;
 
-  constructor(private router: Router) {
-  }
-
-  ngAfterContentInit() {
-    this.items.forEach( c => {
-      c.activated.subscribe( r => {
-        if (this.active) {
-          this.active.active = false;
-        } ;
-        this.active = c;
-      });
+  constructor(private router: Router, private aroute: ActivatedRoute) {
+    console.log('router:', this.router);
+    this.router.events.subscribe( e => {
+      // console.log('url:', this.router.url);
+      // console.log('router state:', this.router.routerState);
+      // if (this.router.routerState.root.children.length > 0 ) {
+      if (e instanceof NavigationEnd) {
+        // console.log('component:', '(' + Date.now + ')' + this.router.routerState.root.children[0].component);
+        // console.log('path: ' + this.getPath());
+        this.items.forEach( i => {
+          i.activatePath(this.getPath());
+        })
+      }
+      // console.log('path:', this.erouterState);
     });
+    // this.aroute.url.subscribe( (u) => {
+    //   console.log('active route:', u);
+    // });
   }
 
-  // navigate(route: string) {
-  //   this.active = route;
-  //   this.router.navigate([route]);
-  //   this.sidenav.close();
-  // }
+  private getPath() {
+    const cmp = this.router.routerState.root.children[0].component;
+    let path: string;
+    this.router.config.forEach(r => {
+      if (r.component === cmp) {
+        path = r.path;
+      }
+    });
+    return path;
+  }
 
 }
