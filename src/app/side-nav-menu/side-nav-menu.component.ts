@@ -57,6 +57,7 @@ export class SideNavMenuComponent {
         this.items.forEach( i => {
           i.activatePath(this.getPath());
         })
+        this.sidenav.close();
       }
       // console.log('path:', this.erouterState);
     });
