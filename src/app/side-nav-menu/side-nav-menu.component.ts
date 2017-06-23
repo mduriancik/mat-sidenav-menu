@@ -1,5 +1,6 @@
 import { AfterContentInit, Component, ContentChildren, EventEmitter, Input, Output, QueryList } from '@angular/core';
 import { Router, ActivatedRoute, NavigationEnd, RouterStateSnapshot } from '@angular/router';
+import { MdSidenav } from '@angular/material';
 
 
 @Component({
@@ -13,8 +14,8 @@ import { Router, ActivatedRoute, NavigationEnd, RouterStateSnapshot } from '@ang
 })
 export class SideNavItemComponent {
 
-  @Input('title') title;
-  @Input('route') route;
+  @Input('title') title: string;
+  @Input('route') route: string;
   active: boolean;
 
   constructor(private router: Router) {
@@ -41,7 +42,7 @@ export class SideNavItemComponent {
 })
 export class SideNavMenuComponent {
 
-  @Input() sidenav;
+  @Input() sidenav: MdSidenav;
   @ContentChildren(SideNavItemComponent) items: QueryList<SideNavItemComponent>;
   active: SideNavItemComponent;
 
