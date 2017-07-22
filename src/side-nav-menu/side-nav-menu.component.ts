@@ -10,7 +10,22 @@ import { MdSidenav } from '@angular/material';
                   [ngClass]="{'side-nav-menu-item-active': active}"
                   (click)="navigate()">{{title}}</a>
              </li>`,
-  styleUrls: ['./side-nav-menu.component.scss']
+  styles: [
+    `.side-nav-menu-item {
+      list-style-type: none;
+      box-sizing: border-box;
+      display: block;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 47px;
+      text-decoration: none;
+      transition: all .3s;
+      padding: 0 16px;
+      position: relative;
+    }
+    .side-nav-menu-item-active {
+      background: #ddd
+    }`]
 })
 export class SideNavItemComponent {
 
@@ -37,8 +52,17 @@ export class SideNavItemComponent {
 
 @Component({
   selector: 'side-nav-menu',
-  templateUrl: './side-nav-menu.component.html',
-  styleUrls: ['./side-nav-menu.component.scss']
+  template: `
+    <nav style="height:100%">
+      <md-toolbar color="primary">
+        <button md-icon-button (click)="sidenav.close()"><md-icon>keyboard_arrow_left</md-icon></button>&nbsp;
+        <span>Side menu</span>
+      </md-toolbar>
+
+      <ul style="list-style-type: none; padding: 0">
+        <ng-content></ng-content>
+      </ul>
+    </nav>`
 })
 export class SideNavMenuComponent {
 

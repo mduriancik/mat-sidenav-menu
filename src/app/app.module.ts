@@ -5,7 +5,7 @@ import { MaterialModule, MdSidenavModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { SideNavMenuModule } from './side-nav-menu/side-nav-menu.module';
+import { SideNavMenuModule } from '../side-nav-menu/side-nav-menu.module';
 import { TestPage1Component, TestPage2Component, TestPage3Component } from './test-pages/test-pages.component';
 
 @NgModule({
