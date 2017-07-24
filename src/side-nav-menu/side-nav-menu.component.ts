@@ -22,9 +22,13 @@ import { MdSidenav } from '@angular/material';
       transition: all .3s;
       padding: 0 16px;
       position: relative;
+      cursor: pointer;
     }
     .side-nav-menu-item-active {
       background: #ddd
+    }
+    .side-nav-menu-item:hover {
+      background: #f0f0f0;
     }`]
 })
 export class SideNavItemComponent {
