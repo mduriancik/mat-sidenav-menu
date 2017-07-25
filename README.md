@@ -14,3 +14,7 @@ side-nav menu component based on @angular/material
     ...
 
     </md-sidenav-container>
+
+1. add material icons fonts
+2. npm install mat-sidenav-menu --save
+3. add SideNavMenuModule
