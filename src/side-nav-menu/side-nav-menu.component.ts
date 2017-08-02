@@ -8,7 +8,10 @@ import { MdSidenav } from '@angular/material';
   template: `<li>
                 <a class="side-nav-menu-item" md-ripple
                   [ngClass]="{'side-nav-menu-item-active': active,'side-nav-menu-item-disabled': disabled}"
-                  (click)="navigate()">{{title}}</a>
+                  (click)="navigate()">
+                      <md-icon *ngIf="icon" style="margin-right:10px;vertical-align:middle">{{icon}}</md-icon>
+                      <span style="vertical-align:middle">{{title}}</span>
+                </a>
              </li>`,
   styles: [
     `.side-nav-menu-item {
@@ -37,6 +40,7 @@ import { MdSidenav } from '@angular/material';
 export class SideNavItemComponent {
 
   @Input('title') title: string;
+  @Input('icon')  icon: string;
   @Input('route') route: string;
   @Input('disabled') disabled: boolean;
   active: boolean;

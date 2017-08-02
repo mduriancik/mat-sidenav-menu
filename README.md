@@ -6,7 +6,7 @@ It is integrated with the angular router.
     <md-sidenav-container style="height:100%">
         <md-sidenav #sidenav mode="over" opened="false">
             <side-nav-menu [sidenav]="sidenav">
-            <side-nav-item route="page1" title="Page 1"></side-nav-item>
+            <side-nav-item route="page1" title="Page 1" icon="home"></side-nav-item>
             <side-nav-item route="page2" title="Page 2" [disabled]="true"></side-nav-item>
             <side-nav-item route="page3" title="Page 3"></side-nav-item>
             </side-nav-menu>
@@ -26,3 +26,4 @@ The project repository contains a [demo application](https://github.com/mdurianc
 __Features__
 
 * disabled items
+* items with icons
