@@ -7,13 +7,13 @@ import { MaterialModule, MdSidenavModule, MdCheckboxModule } from '@angular/mate
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SideNavMenuModule } from '../side-nav-menu/side-nav-menu.module';
-import { TestPage1Component, TestPage2Component, TestPage3Component } from './test-pages/test-pages.component';
+import { TestPage1Component, TestPage2Component, TestPage3Component, TestPageComponent } from './test-pages/test-pages.component';
 import { MenuStateComponent } from './test-pages/manu-state.component';
 import { StateService } from './state-service';
 
 @NgModule({
   declarations: [
-    AppComponent, TestPage1Component, TestPage2Component, TestPage3Component, MenuStateComponent
+    AppComponent, TestPage1Component, TestPage2Component, TestPage3Component, TestPageComponent, MenuStateComponent
   ],
   imports: [
     BrowserModule,

@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
 
-import { TestPage1Component, TestPage2Component, TestPage3Component } from './test-pages/test-pages.component';
+import { TestPage1Component, TestPage2Component, TestPage3Component, TestPageComponent } from './test-pages/test-pages.component';
 import { MenuStateComponent } from './test-pages/manu-state.component';
 
 const routes: Routes = [
@@ -27,6 +27,10 @@ const routes: Routes = [
     path: 'page3',
     component: TestPage3Component
   },
+  {
+    path: 'page/:id',
+    component: TestPageComponent
+  }
 ];
 
 
