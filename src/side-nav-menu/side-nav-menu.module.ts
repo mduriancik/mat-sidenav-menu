@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MdButtonModule, MdIconModule, MdRippleModule, MdToolbarModule } from '@angular/material';
 
 import { SideNavGroupComponent, SideNavItemComponent, SideNavMenuComponent } from './side-nav-menu.component';
@@ -10,7 +11,7 @@ import { SideNavGroupComponent, SideNavItemComponent, SideNavMenuComponent } fro
     SideNavGroupComponent, SideNavMenuComponent, SideNavItemComponent,
   ],
   imports: [
-    BrowserModule,
+    BrowserModule, BrowserAnimationsModule,
     MdButtonModule, MdIconModule, MdToolbarModule, MdRippleModule
   ],
   exports: [
