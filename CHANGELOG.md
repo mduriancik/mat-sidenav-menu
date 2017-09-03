@@ -1,3 +1,9 @@
+# 0.3.0
+
+### Features
+
+* side-nav-group - (visual) grouping of menu items (with optional title)
+
 # 0.2.0
 
 ### Features
