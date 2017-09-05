@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SideNavMenuComponent } from './side-nav-menu.component';
+import { SideNavMenuComponent } from './menu';
 
 describe('SideNavMenuComponent', () => {
   let component: SideNavMenuComponent;

@@ -3,7 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MdButtonModule, MdIconModule, MdRippleModule, MdToolbarModule } from '@angular/material';
 
-import { SideNavGroupComponent, SideNavItemComponent, SideNavMenuComponent } from './side-nav-menu.component';
+import { SideNavMenuComponent } from './menu';
+import { SideNavItemComponent } from './item';
+import { SideNavGroupComponent } from './group';
 
 
 @NgModule({
