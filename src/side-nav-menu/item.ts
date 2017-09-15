@@ -5,15 +5,15 @@ import { MdSidenav } from '@angular/material';
 @Component({
     selector: 'side-nav-item',
     template: `<li>
-                  <a class="side-nav-menu-item" md-ripple
-                    [ngClass]="{'side-nav-menu-item-active': active,'side-nav-menu-item-disabled': disabled}"
+                  <a class="side-nav-item" md-ripple
+                    [ngClass]="{'side-nav-item-active': active,'side-nav-item-disabled': disabled}"
                     (click)="navigate()">
                         <md-icon *ngIf="icon" style="margin-right:10px;vertical-align:middle">{{icon}}</md-icon>
                         <span style="vertical-align:middle">{{title}}</span>
                   </a>
                </li>`,
     styles: [
-      `.side-nav-menu-item {
+      `.side-nav-item {
           list-style-type: none;
           box-sizing: border-box;
           display: block;
@@ -26,13 +26,13 @@ import { MdSidenav } from '@angular/material';
           position: relative;
           cursor: pointer;
         }
-        .side-nav-menu-item-active {
+        .side-nav-item-active {
           background: #ddd
         }
-        .side-nav-menu-item-disabled {
+        .side-nav-item-disabled {
           color: #aaa
         }
-        .side-nav-menu-item:hover {
+        .side-nav-item:hover {
           background: #f0f0f0;
         }`]
   })

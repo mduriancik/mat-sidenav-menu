@@ -13,10 +13,15 @@ import { SideNavItemComponent } from './item';
           <span>Side menu</span>
         </md-toolbar>
 
-        <ul style="list-style-type: none; padding: 0">
+        <ul class="side-nav-menu">
           <ng-content></ng-content>
         </ul>
-      </nav>`
+      </nav>`,
+    styles: [
+      `.side-nav-menu{
+          list-style-type: none;
+          padding: 0
+      }`]
   })
   export class SideNavMenuComponent {
 
