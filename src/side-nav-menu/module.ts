@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MdButtonModule, MdIconModule, MdRippleModule, MdToolbarModule } from '@angular/material';
+import { MatButtonModule, MatIconModule, MatRippleModule, MatToolbarModule } from '@angular/material';
 
 import { SideNavMenuComponent } from './menu';
 import { SideNavItemComponent } from './item';
@@ -14,7 +14,7 @@ import { SideNavGroupComponent } from './group';
   ],
   imports: [
     BrowserModule, BrowserAnimationsModule,
-    MdButtonModule, MdIconModule, MdToolbarModule, MdRippleModule
+    MatButtonModule, MatIconModule, MatToolbarModule, MatRippleModule
   ],
   exports: [
     SideNavGroupComponent, SideNavItemComponent, SideNavMenuComponent

@@ -1,6 +1,5 @@
 import { AfterContentInit, Component, ContentChildren, EventEmitter, Input, Output, QueryList } from '@angular/core';
 import { Router, ActivatedRoute, NavigationEnd, RouterStateSnapshot } from '@angular/router';
-import { MdSidenav } from '@angular/material';
 
 @Component({
   selector: 'side-nav-group',

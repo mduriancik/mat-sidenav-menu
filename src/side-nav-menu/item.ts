@@ -1,6 +1,5 @@
 import { AfterContentInit, Component, ContentChildren, EventEmitter, Input, Output, QueryList } from '@angular/core';
 import { Router, ActivatedRoute, NavigationEnd, RouterStateSnapshot } from '@angular/router';
-import { MdSidenav } from '@angular/material';
 
 @Component({
     selector: 'side-nav-item',
@@ -8,7 +7,7 @@ import { MdSidenav } from '@angular/material';
                   <a class="side-nav-item" md-ripple
                     [ngClass]="{'side-nav-item-active': active,'side-nav-item-disabled': disabled}"
                     (click)="navigate()">
-                        <md-icon *ngIf="icon" style="margin-right:10px;vertical-align:middle">{{icon}}</md-icon>
+                        <mat-icon *ngIf="icon" style="margin-right:10px;vertical-align:middle">{{icon}}</mat-icon>
                         <span style="vertical-align:middle">{{title}}</span>
                   </a>
                </li>`,

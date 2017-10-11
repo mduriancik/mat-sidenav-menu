@@ -1,6 +1,6 @@
 import { AfterContentInit, Component, ContentChildren, EventEmitter, Input, Output, QueryList } from '@angular/core';
 import { Router, ActivatedRoute, NavigationEnd, RouterStateSnapshot } from '@angular/router';
-import { MdSidenav } from '@angular/material';
+import { MatSidenav } from '@angular/material';
 
 import { SideNavItemComponent } from './item';
 
@@ -8,10 +8,10 @@ import { SideNavItemComponent } from './item';
     selector: 'side-nav-menu',
     template: `
       <nav style="height:100%">
-        <md-toolbar color="primary">
-          <button md-icon-button (click)="sidenav.close()"><md-icon>keyboard_arrow_left</md-icon></button>&nbsp;
+        <mat-toolbar color="primary">
+          <button mat-icon-button (click)="sidenav.close()"><mat-icon>keyboard_arrow_left</mat-icon></button>&nbsp;
           <span>Side menu</span>
-        </md-toolbar>
+        </mat-toolbar>
 
         <ul class="side-nav-menu">
           <ng-content></ng-content>
@@ -25,7 +25,7 @@ import { SideNavItemComponent } from './item';
   })
   export class SideNavMenuComponent {
 
-    @Input() sidenav: MdSidenav;
+    @Input() sidenav: MatSidenav;
     @ContentChildren(SideNavItemComponent) items: QueryList<SideNavItemComponent>;
     active: SideNavItemComponent;
 

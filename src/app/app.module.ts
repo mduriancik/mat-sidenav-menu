@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { MdButtonModule, MdIconModule, MdToolbarModule, MdSidenavModule, MdCheckboxModule } from '@angular/material';
+import { MatButtonModule, MatIconModule, MatToolbarModule, MatSidenavModule, MatCheckboxModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -18,7 +18,7 @@ import { StateService } from './state-service';
   imports: [
     BrowserModule,
     HttpModule, FormsModule,
-    MdButtonModule, MdCheckboxModule, MdIconModule, MdSidenavModule, MdToolbarModule,
+    MatButtonModule, MatCheckboxModule, MatIconModule, MatSidenavModule, MatToolbarModule,
     SideNavMenuModule,
     AppRoutingModule
   ],

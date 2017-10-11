@@ -7,13 +7,13 @@ import { StateService } from '../state-service';
     <h3>SideNav Menu State</h3>
     <div>
       <section>
-        <md-checkbox [(ngModel)]="state.disabled['page1']">Page 1 disabled</md-checkbox>
+        <mat-checkbox [(ngModel)]="state.disabled['page1']">Page 1 disabled</mat-checkbox>
       </section>
       <section>
-        <md-checkbox [(ngModel)]="state.disabled['page2']">Page 2 disabled</md-checkbox>
+        <mat-checkbox [(ngModel)]="state.disabled['page2']">Page 2 disabled</mat-checkbox>
       </section>
       <section>
-        <md-checkbox [(ngModel)]="state.disabled['page3']">Page 3 disabled</md-checkbox>
+        <mat-checkbox [(ngModel)]="state.disabled['page3']">Page 3 disabled</mat-checkbox>
       </section>
     </div>`
 })
