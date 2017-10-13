@@ -26,7 +26,7 @@ import { SideNavItemComponent } from './item';
   export class SideNavMenuComponent {
 
     @Input() sidenav: MatSidenav;
-    @ContentChildren(SideNavItemComponent) items: QueryList<SideNavItemComponent>;
+    @ContentChildren(SideNavItemComponent, {descendants: true}) items: QueryList<SideNavItemComponent>;
     active: SideNavItemComponent;
 
     constructor(private router: Router, private aroute: ActivatedRoute) {
@@ -51,13 +51,7 @@ import { SideNavItemComponent } from './item';
     }
 
     private getPath() {
-      const cmp = this.router.routerState.root.children[0].component;
-      let path: string;
-      this.router.config.forEach(r => {
-        if (r.component === cmp) {
-          path = r.path;
-        }
-      });
+      const path = this.router.routerState.snapshot.url;
       return path;
     }
 
