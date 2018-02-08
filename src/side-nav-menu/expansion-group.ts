@@ -6,7 +6,7 @@ import { MatSidenav } from '@angular/material';
   selector: 'side-nav-x-group',
   template:
     `<mat-expansion-panel [hideToggle]="hideToggle">
-        <mat-expansion-panel-header *ngIf="title">{{title}}</mat-expansion-panel-header>
+        <mat-expansion-panel-header *ngIf="title">{{ title }}</mat-expansion-panel-header>
         <ng-content></ng-content>
     </mat-expansion-panel>`,
   styles: [`

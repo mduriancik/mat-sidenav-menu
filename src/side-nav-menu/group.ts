@@ -6,7 +6,7 @@ import { Router, ActivatedRoute, NavigationEnd, RouterStateSnapshot } from '@ang
   template:
     `<div class="side-nav-group">
         <div *ngIf="title" class="side-nav-group-title">
-          <span style="padding: 0 16px;">{{title}}</span>
+          <span style="padding: 0 16px;">{{ title }}</span>
         </div>
         <ng-content></ng-content>
     </div>`,

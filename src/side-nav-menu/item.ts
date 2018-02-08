@@ -7,8 +7,8 @@ import { Router, ActivatedRoute, NavigationEnd, RouterStateSnapshot } from '@ang
                   <a class="side-nav-item" md-ripple
                     [ngClass]="{'side-nav-item-active': active,'side-nav-item-disabled': disabled}"
                     (click)="navigate()">
-                        <mat-icon *ngIf="icon" style="margin-right:10px;vertical-align:middle">{{icon}}</mat-icon>
-                        <span style="vertical-align:middle">{{title}}</span>
+                        <mat-icon *ngIf="icon" style="margin-right:10px;vertical-align:middle">{{ icon }}</mat-icon>
+                        <span style="vertical-align:middle">{{ title }}</span>
                   </a>
                </li>`,
     styles: [

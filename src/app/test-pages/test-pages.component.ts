@@ -39,7 +39,7 @@ export class TestPage3Component implements OnInit {
 
 @Component({
   selector: 'app-test-page',
-  template: '<b>Test Page {{id}}</b>'
+  template: '<b>Test Page {{ id }}</b>'
 })
 export class TestPageComponent implements OnInit {
 
@@ -51,7 +51,7 @@ export class TestPageComponent implements OnInit {
   ngOnInit() {
     this.route.paramMap.subscribe(
       (params) => {
-        this.id = params.get('id')
+        this.id = params.get('id');
       }
     );
   }
