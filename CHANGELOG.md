@@ -1,3 +1,8 @@
+# 0.5.0
+
+* updates material (5.2.0), angular (5.2.1)
+* expasion-group (experimental, known bugs)
+
 # 0.4.1
 
 * update to angular 5.0.0, material 5.0.0-rc.0
