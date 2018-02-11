@@ -24,15 +24,6 @@ import { Router, ActivatedRoute, NavigationEnd, RouterStateSnapshot } from '@ang
           padding: 0 16px;
           position: relative;
           cursor: pointer;
-        }
-        .side-nav-item-active {
-          background: #ddd
-        }
-        .side-nav-item-disabled {
-          color: #aaa
-        }
-        .side-nav-item:hover {
-          background: #f0f0f0;
         }`]
   })
   export class SideNavItemComponent {

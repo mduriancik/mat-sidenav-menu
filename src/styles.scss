@@ -1,0 +1,42 @@
+// @import '~@angular/material/prebuilt-themes/deeppurple-amber.scss';
+@import '~@angular/material/theming';
+@include mat-core();
+
+// light theme
+$demo-app-primary: mat-palette($mat-indigo);
+$demo-app-accent:  mat-palette($mat-pink, A200, A100, A400);
+$demo-app-warn:    mat-palette($mat-red);
+$demo-app-theme:   mat-light-theme($demo-app-primary, $demo-app-accent, $demo-app-warn);
+
+// dark theme.
+// $demo-app-primary: mat-palette($mat-blue-grey);
+// $demo-app-accent:  mat-palette($mat-amber, A200, A100, A400);
+// $demo-app-warn:    mat-palette($mat-deep-orange);
+// $demo-app-theme:   mat-dark-theme($demo-app-primary, $demo-app-accent, $demo-app-warn);
+
+
+@include angular-material-theme($demo-app-theme);
+
+@import 'side-nav-menu/side-nav-menu-theme.scss';
+
+
+html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@include side-nav-menu-theme($demo-app-theme);
+
+side-nav-x-group mat-expansion-panel-header.mat-expansion-panel-header {
+    padding-left: 16px;
+}
+
+div.mat-expansion-panel-body {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+side-nav-x-group side-nav-item li a span {
+    padding-left: 8px;
+  }

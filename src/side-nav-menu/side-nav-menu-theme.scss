@@ -1,0 +1,24 @@
+@import '~@angular/material/theming';
+
+// https://github.com/angular/material2/blob/master/src/lib/core/theming/_palette.scss
+@mixin side-nav-menu-theme($theme) {
+    
+    $background: map-get($theme, background);
+    $foreground: map-get($theme, foreground);
+  
+    .side-nav-item-active {
+        // background: mat-color($background, 'hover');
+        background: mat-color($background, 'selected-button');
+        // color: mat-color($foreground, 'text');
+    }
+
+    .side-nav-item-disabled {
+        color: mat-color($foreground, 'disabled');
+    }
+
+    .side-nav-item:hover {
+        // background: #f0f0f0; 
+        background: mat-color($background, 'hover');
+    }
+  }
+  
