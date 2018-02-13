@@ -10,9 +10,13 @@ It is integrated with the angular router.
               <side-nav-item route="/page2" title="Page 2" [disabled]="true"></side-nav-item>
               <side-nav-item route="/page3" title="Page 3"></side-nav-item>
               <side-nav-group title="submenu 4">
-                 <side-nav-item route="/page/4.1" title="Page 4.1 xxxxx xxxxx"></side-nav-item>
+                 <side-nav-item route="/page/4.1" title="Page 4.1 xxxxx"></side-nav-item>
                  <side-nav-item route="/page/4.2" title="Page 4.2"></side-nav-item>
               </side-nav-group>
+              <side-nav-x-group title="submenu 5">
+                 <side-nav-item route="/page/5.1" title="Page 5.1"></side-nav-item>
+                 <side-nav-item route="/page/5.2" title="Page 5.2"></side-nav-item>
+              </side-nav-x-group>
            </side-nav-menu>
        </mat-sidenav>
     
@@ -32,3 +36,4 @@ __Features__
 * disabled items
 * items with icons
 * item grouping (with or without title)
+* expandable menu groups (side-nav-x-group)
