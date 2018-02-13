@@ -10,7 +10,7 @@ import { SideNavItemComponent } from './item';
       <nav style="height:100%">
         <mat-toolbar color="primary">
           <button mat-icon-button (click)="sidenav.close()"><mat-icon>keyboard_arrow_left</mat-icon></button>&nbsp;
-          <span>Side menu</span>
+          <span>{{ title }}</span>
         </mat-toolbar>
 
         <ul class="side-nav-menu">
@@ -26,6 +26,7 @@ import { SideNavItemComponent } from './item';
   export class SideNavMenuComponent {
 
     @Input() sidenav: MatSidenav;
+    @Input() title: '';
     @ContentChildren(SideNavItemComponent, {descendants: true}) items: QueryList<SideNavItemComponent>;
     active: SideNavItemComponent;
 
