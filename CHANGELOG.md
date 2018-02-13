@@ -1,3 +1,7 @@
+# 0.6.0
+
+* make the menu title modifiable
+
 # 0.5.0
 
 * updates material (5.2.0), angular (5.2.1)
