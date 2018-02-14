@@ -31,7 +31,7 @@ import { SideNavItemComponent } from './item';
     active: SideNavItemComponent;
 
     constructor(private router: Router, private aroute: ActivatedRoute) {
-      console.log('router:', this.router);
+      // console.log('router:', this.router);
       this.router.events.subscribe( e => {
         // console.log('url:', this.router.url);
         // console.log('router state:', this.router.routerState);
