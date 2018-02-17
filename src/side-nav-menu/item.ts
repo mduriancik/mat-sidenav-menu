@@ -4,7 +4,7 @@ import { Router, ActivatedRoute, NavigationEnd, RouterStateSnapshot } from '@ang
 @Component({
     selector: 'side-nav-item',
     template: `<li>
-                  <a class="side-nav-item" md-ripple
+                  <a class="side-nav-item" matRipple
                     [ngClass]="{'side-nav-item-active': active,'side-nav-item-disabled': disabled}"
                     (click)="navigate()">
                         <mat-icon *ngIf="icon" style="margin-right:10px;vertical-align:middle">{{ icon }}</mat-icon>
