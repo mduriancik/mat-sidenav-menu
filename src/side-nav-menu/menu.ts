@@ -18,7 +18,7 @@ import { SideNavItemComponent } from './item';
         </ul>
       </nav>`,
     styles: [
-      `.side-nav-menu{
+      `.side-nav-menu {
           list-style-type: none;
           padding: 0
       }`]
