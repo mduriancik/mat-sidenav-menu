@@ -2,7 +2,8 @@
 
 // https://github.com/angular/material2/blob/master/src/lib/core/theming/_palette.scss
 @mixin side-nav-menu-theme($theme) {
-    
+
+    $is-dark-theme: map-get($theme, is-dark);
     $background: map-get($theme, background);
     $foreground: map-get($theme, foreground);
   
@@ -19,6 +20,21 @@
     .side-nav-item:hover {
         // background: #f0f0f0; 
         background: mat-color($background, 'hover');
+    }
+
+    .side-nav-group {
+        // border-color:#e0e0e0
+        border-color: map-get($mat-grey, 300);
+    }
+
+    .side-nav-group-title {
+        // color:hsla(0,0%,100%,.87);
+        // color: $light-secondary-text;
+        // color: map-get($mat-grey, 100);
+        color: if($is-dark-theme, $dark-primary-text, $light-primary-text);
+        // background:rgba(0,0,0,.32);
+        // background:  map-get($mat-grey, 500);
+        background: mat-color($foreground, secondary-text, if($is-dark-theme, 0.5, 0.41));
     }
   }
   

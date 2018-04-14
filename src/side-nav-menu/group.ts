@@ -14,11 +14,8 @@ import { Router, ActivatedRoute, NavigationEnd, RouterStateSnapshot } from '@ang
     .side-nav-group {
       border-width:1px 0px 1px 0px;
       border-style:solid;
-      border-color:#e0e0e0
     }
     .side-nav-group-title {
-      background:rgba(0,0,0,.32);
-      color:hsla(0,0%,100%,.87);
       width:100%
     }
   `]
