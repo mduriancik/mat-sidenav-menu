@@ -28,6 +28,17 @@ It is integrated with the angular router.
 2. npm install mat-sidenav-menu --save
 3. add SideNavMenuModule import
 4. define routes corresponding to menu items (side-nav-item.route attributes contain corresponding router paths)
+5. apply you theme to mat-sidenav-menu:
+
+    styles.scss:
+
+        $demo-app-theme: ...
+
+        ....
+
+        @import '~mat-sidenav-menu/src/side-nav-menu/side-nav-menu-theme.scss';
+        @include side-nav-menu-theme($demo-app-theme);
+
 
 The project repository contains a [demo application](https://github.com/mduriancik/mat-sidenav-menu/tree/master/src/app).
 
@@ -37,3 +48,4 @@ __Features__
 * items with icons
 * item grouping (with or without title)
 * expandable menu groups (side-nav-x-group)
+* theaming support
