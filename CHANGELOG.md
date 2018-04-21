@@ -1,3 +1,9 @@
+# 0.7.0
+
+Breaking: 
+* theming support
+   * __(breaking)__ theming must be included in your application scss styles
+
 # 0.6.0
 
 * make the menu title modifiable
