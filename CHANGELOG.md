@@ -1,6 +1,6 @@
 # 0.8.0
 
-* update angular/material/cli -> ~6.0.0
+* update angular/material/cli -> ^6.0.0
 
 # 0.7.0
 
