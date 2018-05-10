@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "mat-sidenav-menu": {
+    "mat-sidenav-menu-demo": {
       "root": "",
       "projectType": "application",
       "prefix": "app",
@@ -111,7 +111,7 @@
         }
       }
     },
-    "mat-sidenav-menu-e2e": {
+    "mat-sidenav-menu-demo-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -126,6 +126,46 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "mat-sidenav-menu": {
+      "root": "projects/mat-sidenav-menu",
+      "sourceRoot": "projects/mat-sidenav-menu/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/mat-sidenav-menu/tsconfig.lib.json",
+            "project": "projects/mat-sidenav-menu/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/mat-sidenav-menu/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/mat-sidenav-menu/src/test.ts",
+            "tsConfig": "projects/mat-sidenav-menu/tsconfig.spec.json",
+            "karmaConfig": "projects/mat-sidenav-menu/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/mat-sidenav-menu/tsconfig.lib.json",
+              "projects/mat-sidenav-menu/tsconfig.spec.json"
+            ],
             "exclude": [
               "**/node_modules/**"
             ]

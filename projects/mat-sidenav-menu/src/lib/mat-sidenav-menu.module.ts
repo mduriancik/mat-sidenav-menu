@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatExpansionModule, MatIconModule, MatRippleModule, MatToolbarModule } from '@angular/material';
 
-import { SideNavMenuComponent } from './menu';
+import { MatSidenavMenuComponent } from './mat-sidenav-menu.component';
 import { SideNavItemComponent } from './item';
 import { SideNavGroupComponent } from './group';
 import { SideNavExpansionGroupComponent } from './expansion-group';
@@ -11,7 +11,7 @@ import { SideNavExpansionGroupComponent } from './expansion-group';
 
 @NgModule({
   declarations: [
-    SideNavExpansionGroupComponent, SideNavGroupComponent, SideNavMenuComponent, SideNavItemComponent,
+    SideNavExpansionGroupComponent, SideNavGroupComponent, MatSidenavMenuComponent, SideNavItemComponent,
   ],
   imports: [
     BrowserModule, BrowserAnimationsModule,
@@ -19,7 +19,7 @@ import { SideNavExpansionGroupComponent } from './expansion-group';
   ],
   exports: [
     MatExpansionModule,
-    SideNavExpansionGroupComponent, SideNavGroupComponent, SideNavItemComponent, SideNavMenuComponent
+    SideNavExpansionGroupComponent, SideNavGroupComponent, SideNavItemComponent, MatSidenavMenuComponent
   ]
 })
-export class SideNavMenuModule {}
+export class MatSidenavMenuModule {}
