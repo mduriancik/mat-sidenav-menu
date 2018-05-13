@@ -1,6 +1,6 @@
 {
-  "name": "mat-sidenav-menu",
-  "version": "0.8.0",
+  "name": "mat-sidenav-menu-demo",
+  "version": "0.8.1",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -15,6 +15,7 @@
     "test": "ng test",
     "e2e": "ng e2e"
   },
+  "private": true,
   "dependencies": {
     "@angular/common": "^6.0.0",
     "@angular/core": "^6.0.0",
