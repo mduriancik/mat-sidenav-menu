@@ -6,7 +6,7 @@ import { MatButtonModule, MatIconModule, MatToolbarModule, MatSidenavModule, Mat
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { MatSidenavMenuModule } from '../../projects/mat-sidenav-menu/src/public_api';
+import { MatSidenavMenuModule } from 'mat-sidenav-menu';
 import { TestPage1Component, TestPage2Component, TestPage3Component, TestPageComponent } from './test-pages/test-pages.component';
 import { MenuStateComponent } from './test-pages/manu-state.component';
 import { StateService } from './state-service';
