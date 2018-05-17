@@ -36,7 +36,7 @@ It is integrated with the angular router.
 
         ....
 
-        @import '~mat-sidenav-menu/src/side-nav-menu/side-nav-menu-theme.scss';
+        @import '~mat-sidenav-menu/mat-sidenav-menu-theme.scss';
         @include side-nav-menu-theme($demo-app-theme);
 
 

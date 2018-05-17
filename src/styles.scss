@@ -17,7 +17,7 @@ $demo-app-theme:   mat-light-theme($demo-app-primary, $demo-app-accent, $demo-ap
 
 @include angular-material-theme($demo-app-theme);
 
-@import 'side-nav-menu/side-nav-menu-theme.scss';
+@import '~mat-sidenav-menu/mat-sidenav-menu-theme.scss';
 
 
 html, body {

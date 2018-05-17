@@ -1,3 +1,18 @@
+# 0.9.0
+
+__breaking__ 
+
+* mat-sidenav-menu theme scss moved and renamed
+
+    ~~@import '~mat-sidenav-menu/src/side-nav-menu/side-nav-menu-theme.scss';~~
+
+    @import '~mat-sidenav-menu/mat-sidenav-menu-theme.scss';
+
+__other modifications__
+
+* angular cli library project structure (ng generate library ...)
+* building with "ng build mat-sidenav-menu" 
+
 # 0.8.0
 
 * update angular/material/cli -> ^6.0.0
