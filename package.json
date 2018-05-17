@@ -7,7 +7,8 @@
     "url": "https://github.com/mduriancik/mat-sidenav-menu.git"
   },
   "scripts": {
-    "build": "ng build",
+    "build": "ng build mat-sidenav-menu --prod",
+    "postbuild": "ncp ./projects/mat-sidenav-menu/src/lib/mat-sidenav-menu-theme.scss  ./dist/mat-sidenav-menu/mat-sidenav-menu-theme.scss",
     "lint": "ng lint",
     "ng": "ng",
     "prepublish": "npm run lint && npm run build",
