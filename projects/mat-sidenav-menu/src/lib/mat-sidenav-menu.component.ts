@@ -5,7 +5,7 @@ import { MatSidenav } from '@angular/material';
 import { SideNavItemComponent } from './item';
 
 @Component({
-    selector: 'mat-sidenav-menu',
+    selector: 'side-nav-menu',
     template: `
       <nav style="height:100%">
         <mat-toolbar color="primary">
