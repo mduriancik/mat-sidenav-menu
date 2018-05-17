@@ -10,15 +10,7 @@ import { Router, ActivatedRoute, NavigationEnd, RouterStateSnapshot } from '@ang
         </div>
         <ng-content></ng-content>
     </div>`,
-  styles: [`
-    .side-nav-group {
-      border-width:1px 0px 1px 0px;
-      border-style:solid;
-    }
-    .side-nav-group-title {
-      width:100%
-    }
-  `]
+  styleUrls: [`group.scss`]
 })
 export class SideNavGroupComponent {
   @Input('title') title: string;
