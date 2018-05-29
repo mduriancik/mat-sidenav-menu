@@ -7,8 +7,9 @@
     "url": "https://github.com/mduriancik/mat-sidenav-menu.git"
   },
   "scripts": {
+    "prebuild": "node --experimental-modules scripts/clean.mjs",
     "build": "ng build mat-sidenav-menu --prod",
-    "postbuild": "ncp ./projects/mat-sidenav-menu/src/lib/mat-sidenav-menu-theme.scss  ./dist/mat-sidenav-menu/mat-sidenav-menu-theme.scss",
+    "postbuild": "node --experimental-modules ./scripts/copy.mjs",
     "lint": "ng lint",
     "ng": "ng",
     "prepublish": "npm run lint && npm run build",
@@ -35,9 +36,9 @@
     "zone.js": "^0.8.24"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "0.6.0",
+    "@angular-devkit/build-angular": "^0.6.5",
     "@angular-devkit/build-ng-packagr": "^0.6.5",
-    "@angular/cli": "6.0.0",
+    "@angular/cli": "6.0.5",
     "@angular/compiler-cli": "^6.0.3",
     "@angular/language-service": "^6.0.3",
     "@types/jasmine": "~2.8.6",
@@ -53,7 +54,6 @@
     "karma-jasmine": "1.1.0",
     "karma-jasmine-html-reporter": "0.2.2",
     "material-design-icons-iconfont": "^3.0.3",
-    "ncp": "^2.0.0",
     "ng-packagr": "^3.0.0",
     "protractor": "5.3.1",
     "ts-node": "~5.0.1",
@@ -62,7 +62,7 @@
     "tslint": "~5.9.1",
     "typescript": "~2.7.2"
   },
-  "typings": "dist/aot/index.d.ts",
-  "main": "dist/aot/index.js",
-  "module": "dist/aot/index.js"
+  "engines": {
+    "node": "~10.2.1"
+  }
 }
