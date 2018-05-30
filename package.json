@@ -33,6 +33,7 @@
     "core-js": "^2.5.7",
     "mat-sidenav-menu": "file:dist/mat-sidenav-menu",
     "rxjs": "^6.2.0",
+    "simple-git": "^1.95.0",
     "zone.js": "^0.8.24"
   },
   "devDependencies": {
