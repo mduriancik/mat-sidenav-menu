@@ -3,6 +3,14 @@
 side-nav menu component based on @angular/material.
 It is integrated with the angular router.
 
+## Breaking changes in 0.9.0
+
+* scss import moved: '~mat-sidenav-menu/mat-sidenav-menu-theme.scss'
+* module name changed: SideNavMenuModule -> MatSidenavMenuModule
+
+## Usage
+
+```html
     <mat-sidenav-container style="height:100%">
        <mat-sidenav #sidenav mode="over" opened="false">
            <side-nav-menu title="Demo Menu" [sidenav]="sidenav">
@@ -26,7 +34,7 @@ It is integrated with the angular router.
 
 1. add material icons font
 2. npm install mat-sidenav-menu --save
-3. add SideNavMenuModule import
+3. add MatSidenavMenuModule import
 4. define routes corresponding to menu items (side-nav-item.route attributes contain corresponding router paths)
 5. apply you theme to mat-sidenav-menu:
 

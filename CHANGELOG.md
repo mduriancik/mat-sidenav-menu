@@ -8,6 +8,9 @@ __breaking__
 
     @import '~mat-sidenav-menu/mat-sidenav-menu-theme.scss';
 
+* SideNavMenuModule renamed to MatSidenavMenuModule
+
+
 __other modifications__
 
 * angular cli library project structure (ng generate library ...)
