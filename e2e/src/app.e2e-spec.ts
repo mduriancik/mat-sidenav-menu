@@ -1,4 +1,5 @@
 import { MatSidenavMenuPage } from './app.po';
+import { browser } from 'protractor';
 
 describe('mat-sidenav-menu App', () => {
   let page: MatSidenavMenuPage;
@@ -7,8 +8,9 @@ describe('mat-sidenav-menu App', () => {
     page = new MatSidenavMenuPage();
   });
 
-  it('should display welcome message', () => {
+  it('menu title', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!!');
+    page.clickMenuButton();
+    expect(page.getMenuTitle()).toEqual('Demo Menu');
   });
 });
