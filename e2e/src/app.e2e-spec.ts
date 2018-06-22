@@ -14,6 +14,14 @@ describe('mat-sidenav-menu App', () => {
     expect(page.getMenuTitle()).toEqual('Demo Menu');
   });
 
+  it('nav-item displayed', async () => {
+    page.navigateTo();
+    const item0 = element.all(by.css('side-nav-item a')).get(0);
+    expect(item0.isDisplayed()).toBe(false);
+    await page.clickMenuButton();
+    expect(item0.isDisplayed()).toBe(true);
+  });
+
   it('nav-item action', () => {
     page.navigateTo();
     page.clickMenuButton();
@@ -24,9 +32,30 @@ describe('mat-sidenav-menu App', () => {
   it('nav-item active', () => {
     page.navigateTo();
     page.clickMenuButton();
-    element.all(by.css('side-nav-item a')).get(1).click();
-    // page.clickMenuButton(); // -> menu dont close if a click on an active item (bug? or not?)
-    const itemText = element(by.css('.side-nav-item-active span')).getText();
-    expect(itemText).toBe('Page 1');
+    expect(page.getActiveItemText()).toBe('Page 1');
   });
+
+  it('nav-item disabled', () => {
+    page.navigateTo();
+    page.clickMenuButton();
+    expect(page.getDisabledItemText()).toEqual('Page 2');
+  });
+
+
+  it('nav-item activated by router', () => {
+    page.navigateTo('/#/page3');
+    page.clickMenuButton();
+    expect(page.getActiveItemText()).toEqual('Page 3');
+  });
+
+  it('nav-item expanded', () => {
+    page.navigateTo();
+    page.clickMenuButton();
+    const submenu5 = element(by.cssContainingText('.mat-content', 'submenu 5'));
+    const expPnl = element.all(by.css('.mat-expansion-panel-content')).get(0);
+    expect(expPnl.isDisplayed()).toBeFalsy();
+    submenu5.click();
+    expect(expPnl.isDisplayed()).toBeTruthy();
+  });
+
 });
