@@ -28,10 +28,10 @@ import { Router, ActivatedRoute, NavigationEnd, RouterStateSnapshot } from '@ang
   })
   export class SideNavItemComponent {
 
-    @Input('title') title: string;
-    @Input('icon')  icon: string;
-    @Input('route') route: string;
-    @Input('disabled') disabled: boolean;
+    @Input() title: string;
+    @Input()  icon: string;
+    @Input() route: string;
+    @Input() disabled: boolean;
     active: boolean;
 
     constructor(private router: Router) {

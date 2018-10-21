@@ -17,7 +17,7 @@ import { MatSidenav } from '@angular/material';
   `]
 })
 export class SideNavExpansionGroupComponent {
-  @Input('title') title: string;
-  @Input('hideToggle') hideToggle: string;
+  @Input() title: string;
+  @Input() hideToggle: string;
 
 }

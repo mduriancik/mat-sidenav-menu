@@ -13,6 +13,6 @@ import { Router, ActivatedRoute, NavigationEnd, RouterStateSnapshot } from '@ang
   styleUrls: [`group.scss`]
 })
 export class SideNavGroupComponent {
-  @Input('title') title: string;
+  @Input() title: string;
 
 }
