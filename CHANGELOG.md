@@ -1,3 +1,7 @@
+# 0.10.0
+
+* update to angular/material ^7.0.0
+
 # 0.9.0
 
 __breaking__ 
