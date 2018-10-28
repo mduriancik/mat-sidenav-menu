@@ -1,3 +1,8 @@
+# 0.10.1
+
+* (fix) add README.md to npm package
+* (fix) add repo info to npm package
+
 # 0.10.0
 
 * update to angular/material ^7.0.0
