@@ -42,7 +42,9 @@ import { SideNavItemComponent } from './item';
           this.items.forEach( i => {
             i.activatePath(this.getPath());
           });
-          this.sidenav.close();
+          if (!this.sidenav.mode === 'side') {
+            this.sidenav.close();
+          }
         }
         // console.log('path:', this.erouterState);
       });
