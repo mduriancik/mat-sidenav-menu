@@ -56,7 +56,7 @@
     "karma-jasmine": "1.1.2",
     "karma-jasmine-html-reporter": "0.2.2",
     "material-design-icons-iconfont": "^3.0.3",
-    "ng-packagr": "4.3.1",
+    "ng-packagr": "10.1.1",
     "protractor": "5.4.1",
     "simple-git": "1.105.0",
     "ts-node": "7.0.1",
