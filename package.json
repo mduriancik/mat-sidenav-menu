@@ -58,7 +58,7 @@
     "material-design-icons-iconfont": "^3.0.3",
     "ng-packagr": "4.3.1",
     "protractor": "5.4.1",
-    "simple-git": "1.105.0",
+    "simple-git": "3.15.0",
     "ts-node": "7.0.1",
     "tsickle": ">=0.29.0",
     "tslib": "1.9.3",
